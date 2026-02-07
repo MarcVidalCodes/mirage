@@ -1,5 +1,5 @@
 # Mirage 
-###*IN DEVELOPMENT*
+### *IN DEVELOPMENT*
 
 Mirage is a Kubernetes operator that automatically provisions isolated full-stack preview environments for every GitHub PR. It treats infrastructure as a disposable resource, eliminating the "it works on my machine" issue. 
 
