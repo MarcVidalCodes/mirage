@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mirage
+  labels:
+    app: mirage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mirage
+  template:
+    metadata:
+      labels:
+        app: mirage
+    spec:
+      containers:
+      - name: mirage
+        image: mirage:v1
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: IfNotPresent 
+        env:
+        - name: GITHUB_SECRET
+          value: "secret123"
