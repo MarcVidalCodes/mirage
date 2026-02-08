@@ -8,12 +8,15 @@ RUN go mod download
 COPY . .
 
 # build binary
-RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
+RUN CGO_ENABLED=0 GOOS=linux go build -o /mirage
 
 # distroless for security + speed + size
 FROM gcr.io/distroless/static:nonroot
 
 WORKDIR /
+
+# Copy the binary from builder stage
+COPY --from=builder /mirage /mirage
 
 USER 65532:65532
 ENTRYPOINT [ "/mirage" ]
