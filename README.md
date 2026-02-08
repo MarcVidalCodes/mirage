@@ -10,7 +10,7 @@ Mirage is a Kubernetes operator that automatically provisions isolated full-stac
 - Drift Detection: Watches for manual changes and reverts them to ensure GitOps compliance.
 
 ## Why I built it / The Vision
-I building Mirage to solve the "Environment Drift" that plagued my previous internships, where code that worked locally or in staging worked differently than it did in production. By spinning up production like environments for every Pull Request, Mirage shifts infrastructure testing, ensuring that if a feature works in teh PR, it works in the real world. It tranforms infrastructure from a static bottleneck into a disposable resource that emppowers devs to test without fear. 
+I am building Mirage to solve the "Environment Drift" that plagued my previous internships, where code that worked locally or in staging worked differently than it did in production. By spinning up production like environments for every Pull Request, Mirage shifts infrastructure testing, ensuring that if a feature works in teh PR, it works in the real world. It tranforms infrastructure from a static bottleneck into a disposable resource that emppowers devs to test without fear. 
 
 ## Getting Started
 1. ```git clone https://github.com/MarcVidalCodes/mirage.git```
